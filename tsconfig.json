@@ -1,0 +1,55 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "module": "esnext",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": "src",
+    "paths": {
+      "@components": ["app/components/index"],          // main components (home, contact, services)
+      "@components/*": ["app/components/*"],
+
+      "@layouts": ["components/layout/index"],          // layout components (header, footer, logo placeholder)
+      "@layouts/*": ["components/layout/*"],
+
+      "@ui": ["components/ui/index"],                   // UI components (buttons, modals, etc.)
+      "@ui/*": ["components/ui/*"],
+
+      "@constants": ["constants/index"],                // Constant values (nav links)
+      "@constants/*": ["constants/*"],
+
+      "@styles": ["styles/index"],
+      "@styles/*": ["styles/*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.js",
+    "src/**/*.jsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
